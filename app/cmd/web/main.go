@@ -9,7 +9,7 @@ import (
 )
 
 func main(){
-	port:= "8080"
+	port:= "10000"
 	mux := http.NewServeMux()
 	frontend.InitFrontend(mux)
 	backend.InitBackend(mux)
