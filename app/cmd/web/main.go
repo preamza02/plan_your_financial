@@ -14,7 +14,7 @@ func main(){
 	frontend.InitFrontend(mux)
 	backend.InitBackend(mux)
 	log.Printf("Server starting on :%s\n", port)
-	err := http.ListenAndServe(fmt.Sprintf(":%s",port), nil)
+	err := http.ListenAndServe(fmt.Sprintf(":%s",port), mux)
 	if err != nil {
 		log.Fatal(err)
 	}
